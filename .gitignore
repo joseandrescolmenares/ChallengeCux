@@ -1,0 +1,19 @@
+# Node modules
+node_modules/
+
+# Config files
+.env
+
+# Log files
+*.log
+
+# Dependency directories
+jspm_packages/
+bower_components/
+
+# macOS
+.DS_Store
+
+# Editor files
+.vscode/
+*.swp
