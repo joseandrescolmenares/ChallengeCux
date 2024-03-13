@@ -1,6 +1,6 @@
-# Nombre del Proyecto
+# Challenge Cux.ai
 
-Descripción corta del proyecto.
+Challenge tecnico de cux.ai
 
 ## Instalación
 
