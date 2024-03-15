@@ -1,12 +1,11 @@
-
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const userController = require('../app/controllers/userController');
+const activityController = require("../app/controllers/activityController");
 
-router.get('/', (req, res) => {
-  res.render('index');
+router.get("/", (req, res) => {
+  res.send("index");
 });
 
-router.get('/users', userController.getUsers);
+router.get("/activitys", activityController.getActivity);
 
 module.exports = router;

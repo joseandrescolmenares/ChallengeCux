@@ -4,7 +4,6 @@ const app = express();
 const config = require('./config/config');
 const routes = require('./routes/index');
 
-app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 
