@@ -3,11 +3,14 @@ const express = require('express');
 const app = express();
 const config = require('./config/config');
 const routes = require('./routes/index');
+const routeChatActivity = require("./routes/chatActivity")
 
 app.use(express.static('public'));
 
 
 app.use('/', routes);
+
+app.use("/chatActivity", routeChatActivity)
 
 
 app.use((err, req, res, next) => {
