@@ -7,8 +7,6 @@ router.get("/", (req, res) => {
   res.send("index");
 });
 
-
-
 router.get("/activitys", activityController.getActivity);
 
 module.exports = router;

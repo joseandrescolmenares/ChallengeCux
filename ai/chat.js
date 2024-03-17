@@ -1,22 +1,28 @@
-import { ChatOpenAI } from "@langchain/openai";
-import { ChatPromptTemplate } from "@langchain/core/prompts";
-import { StringOutputParser } from "@langchain/core/output_parsers";
-import prompts from "../utils/prompts";
+const { ChatOpenAI } = require("@langchain/openai");
+const { ChatPromptTemplate } = require("@langchain/core/prompts");
+const { StringOutputParser } = require("@langchain/core/output_parsers");
+require('dotenv').config();
+const { prompts } = require("../utils/prompts");
 
-export  const chat = async () => {
-  const prompt = ChatPromptTemplate.fromTemplate(prompts);
+const chat = async (message) => {
+
+  
+
+  const prompt = ChatPromptTemplate.fromTemplate(`{input}`);
   const outputParser = new StringOutputParser();
 
   const chatModel = new ChatOpenAI({
-    openAIApiKey: "...",
+    openAIApiKey: process.env.OPENAI_API_KEY,
   });
 
   const llmChain = prompt.pipe(chatModel).pipe(outputParser);
 
   const response = await llmChain.invoke({
-    prompt: { prompt },
-    input: "what is LangSmith?",
+    input: message,
   });
+
+  console.log(response,"respuestas")
 
   return response;
 };
+module.exports = chat;
