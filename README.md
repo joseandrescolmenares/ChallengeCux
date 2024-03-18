@@ -10,7 +10,7 @@ Challenge tecnico de cux.ai
 ## Uso
 
 1. Configura las variables de entorno en el archivo `.env`.
-2. Inicia la aplicación: `npm start`
+2. Inicia la aplicación: `npm run dev`
 3. Accede a la aplicación en tu navegador: `http://localhost:puerto`
 
 ## Estructura de Carpetas
