@@ -33,4 +33,5 @@ Challenge tecnico de cux.ai
 
 - Node.js
 - Express
-- Otros módulos y servicios de inteligencia artificial (AI)
+- Langchain.js
+- OpenAI
