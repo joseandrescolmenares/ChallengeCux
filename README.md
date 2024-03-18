@@ -26,10 +26,8 @@ Challenge tecnico de cux.ai
 - `/middlewares`: Middlewares de la aplicación.
 - `/utils`: Funciones de utilidad de la aplicación.
 - `/ai`: Archivos relacionados con la inteligencia artificial.
-  - `/chatbot`: Archivos relacionados con la integración de un chatbot.
-  - `/sentiment-analysis`: Archivos relacionados con el análisis de sentimientos.
-  - `/speech-recognition`: Archivos relacionados con el reconocimiento de voz.
-  - `/translation`: Archivos relacionados con la traducción de texto.
+  - `/chatbot`: Archivos relacionados con la integración de chat.
+ 
 
 ## Tecnologías Utilizadas
 
