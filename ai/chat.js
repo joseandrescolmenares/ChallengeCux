@@ -13,7 +13,6 @@ const chat = async (body) => {
   const foundActivity = findActivityById(activityId);
 
   if (foundActivity) {
-    
   } else {
     console.log("Actividad no encontrada para el ID:", activityId);
   }
@@ -31,7 +30,6 @@ const chat = async (body) => {
     input: message,
   });
 
-  console.log(response, "respuestas");
 
   return response;
 };
