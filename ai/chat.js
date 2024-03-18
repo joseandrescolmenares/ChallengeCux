@@ -1,14 +1,24 @@
 const { ChatOpenAI } = require("@langchain/openai");
 const { ChatPromptTemplate } = require("@langchain/core/prompts");
 const { StringOutputParser } = require("@langchain/core/output_parsers");
-require('dotenv').config();
-const { prompts } = require("../utils/prompts");
+require("dotenv").config();
+const chatactivity = require("../utils/chatActivity");
 
-const chat = async (message) => {
+const chat = async (body) => {
+  const { message, activityId } = body;
+  function findActivityById(activityId) {
+    return chatactivity.find((activity) => activity.id == activityId);
+  }
 
-  
+  const foundActivity = findActivityById(activityId);
 
-  const prompt = ChatPromptTemplate.fromTemplate(`{input}`);
+  if (foundActivity) {
+    
+  } else {
+    console.log("Actividad no encontrada para el ID:", activityId);
+  }
+
+  const prompt = ChatPromptTemplate.fromTemplate(foundActivity?.prompt);
   const outputParser = new StringOutputParser();
 
   const chatModel = new ChatOpenAI({
@@ -21,7 +31,7 @@ const chat = async (message) => {
     input: message,
   });
 
-  console.log(response,"respuestas")
+  console.log(response, "respuestas");
 
   return response;
 };
