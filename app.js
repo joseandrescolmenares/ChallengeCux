@@ -4,6 +4,9 @@ const config = require("./config/config");
 const bodyParser = require("body-parser");
 const routes = require("./routes/index");
 const routeChatActivity = require("./routes/chat");
+const cors = require("cors");
+
+app.use(cors());
 
 app.use(express.json());
 
