@@ -1,4 +1,4 @@
-# Challenge Cux.ai
+# Challenge
 
 Challenge tecnico de cux.ai
 
