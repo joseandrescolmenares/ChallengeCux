@@ -1,6 +1,4 @@
-# Challenge
 
-Challenge tecnico de cux.ai
 
 ## Instalación
 
